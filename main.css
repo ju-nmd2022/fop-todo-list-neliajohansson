@@ -41,3 +41,69 @@ h4 {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
+.create-task input[type="text"] {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  color: var(--secondary);
+  background-color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.create-task .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.create-task .options label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 4px solid var(--secondary);
+}
+
+.bubble.personal {
+  border-color: var(--primary);
+}
+
+.bubble::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  background-color: var(--secondary);
+  border-radius: 999px;
+}
+
+.bubble.personal::after {
+  background-color: var(--primary);
+}
+
+input:checked ~ .bubble::after {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
