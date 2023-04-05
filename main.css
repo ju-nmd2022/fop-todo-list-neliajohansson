@@ -1,0 +1,23 @@
+:root {
+  --primary: #8a9a5b;
+  --secondary: #563d2d;
+  --background: #e4e0dc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background);
+}
+
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
