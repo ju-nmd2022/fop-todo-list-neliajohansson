@@ -107,3 +107,76 @@ input:checked ~ .bubble::after {
   height: 10px;
   opacity: 1;
 }
+
+.create-task .options label div {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.create-task input[type="submit"] {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.create-task input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.task-list .task-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.task-item label {
+  display: block;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.task-item .task-content {
+  flex: 1 1 0%;
+}
+
+.task-item .task-content input {
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+.task-item .actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-item .actions button {
+  display: block;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.task-item .actions button:hover {
+  opacity: 0.8;
+}
+
+.task-item .actions .delete {
+  background-color: var(--secondary);
+}
+
+.task-item.done .task-content input {
+  text-decoration: line-through;
+  color: var(--secondary);
+}
