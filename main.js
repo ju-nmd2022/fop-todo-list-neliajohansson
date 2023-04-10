@@ -1,3 +1,4 @@
+// The following 96 lines of code were adapted from https://www.youtube.com/watch?v=6eFwtaZf6zc Accessed: 2023-04-05
 window.addEventListener("load", () => {
   tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   const newTaskForm = document.querySelector("#new-task-form");
