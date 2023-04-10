@@ -2,6 +2,7 @@ window.addEventListener("load", () => {
   tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   const newTaskForm = document.querySelector("#new-task-form");
 
+  // Save new task in localStorage
   newTaskForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -24,6 +25,7 @@ window.addEventListener("load", () => {
   DisplayTasks();
 });
 
+// Display task in to-do list
 function DisplayTasks() {
   const taskList = document.querySelector("#task-list");
   taskList.innerHTML = "";
@@ -39,6 +41,7 @@ function DisplayTasks() {
     const actions = document.createElement("div");
     const deleteButton = document.createElement("button");
 
+    // Display task category
     input.type = "checkbox";
     input.checked = task.done;
     span.classList.add("bubble");
@@ -48,6 +51,7 @@ function DisplayTasks() {
       span.classList.add("school");
     }
 
+    // Display task buttons
     content.classList.add("task-content");
     actions.classList.add("actions");
     deleteButton.classList.add("delete");
@@ -64,6 +68,7 @@ function DisplayTasks() {
 
     taskList.appendChild(taskItem);
 
+    // Save task as done in localStorage
     if (task.done) {
       taskItem.classList.add("done");
     }
@@ -81,6 +86,7 @@ function DisplayTasks() {
       DisplayTasks();
     });
 
+    // Delete task
     deleteButton.addEventListener("click", (e) => {
       tasks = tasks.filter((t) => t != task);
       localStorage.setItem("tasks", JSON.stringify(tasks));
